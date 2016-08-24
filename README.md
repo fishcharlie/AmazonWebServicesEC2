@@ -21,7 +21,22 @@
 **Steps/Commands**
 
 - Create server using Amazon Web Services EC2 Management Console
-- SSH into server `ssh URLHERE`
+  - Log into [AWS](http://aws.amazon.com)
+  - Open EC2 Console
+  - Click Launch Instance
+  - Choose Amazon Machine Image (AMI)/OS
+  - Choose instance type (make sure to look at EC2 pricing)
+  - On step 4 you can choose how much storage your instance will have
+  - Step 5 you will be able to name your instance to easily track later on
+  - Step 6 you will be able to configure your security group
+    - For most web instances you will probably want to open HTTP (port 80) everywhere
+    - If you are using SSL or HTTPS (port 443) you will probably want to open that everywhere
+    - For SSH you might just want to open that for your specific IP so only people on your IP address can SSH into your server
+  - Launch the instance
+- Select your new instance in the Instance tab in the EC2 Dashboard
+- Note the Public IP address in the details menu at the bottom of the screen for your instance
+- Click connect to get the details on how to connect to your instance
+- SSH into instance `ssh URLHERE` **NOTE** you must include the `-i` tag and a link to your private key unless you setup that key to be universal on your computer
 - Install Node on EC2 instance
 
 ```
@@ -29,7 +44,7 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-- Get code on server (SCP, Git Pull, FTP, etc.)
+- Get code on server ([SCP](http://www.hypexr.org/linux_scp_help.php), Git Pull, FTP, [AWS CodeDeploy](https://aws.amazon.com/codedeploy/), etc.)
 - [Map port 3000 to port 80](http://stackoverflow.com/questions/16573668/best-practices-when-running-node-js-with-port-80-ubuntu-linode) `sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000`
 - `node server.js`
 - Open server IP in browser
