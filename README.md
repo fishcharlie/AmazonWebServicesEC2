@@ -39,4 +39,5 @@ sudo apt-get install -y nodejs
 - Running `node server.js` will only run in that single SSH instance. So when you quit terminal your app will no longer be live. [PM2](https://github.com/Unitech/pm2) is a great Node package to run server even after quitting terminal or SSH.
 - Be sure to think about what happens if you server or app crashes. Always make sure to have backup systems in place as best as you can.
 - Remember you can also map the IP address of your EC2 instance to your domain DNS so you can type in your domain name instead of IP address to view your website.
+- Don't forget to look at the [pricing](https://aws.amazon.com/ec2/pricing/) for EC2 instances 
 - We just talked about the very basics about getting a basic Node/Express app running on an EC2 instance. The possibilities are infinite and there is SO much more you can do with EC2.
