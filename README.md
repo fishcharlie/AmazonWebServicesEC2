@@ -5,13 +5,13 @@
 **What is it?**
 
 - Amazon Web Services (AWS) EC2 is a service provided by Amazon that allows you to easily create server instances.
-- These servers can be used to run Node.js apps, Rails apps, or many other things.
+- These servers can be used to host/run basically anything. For example you can use EC2 instances to host/run your Rails apps or Node.js apps.
 
 **Why AWS EC2?**
 
 - EC2 makes scaling your application and service very easy. Amazon makes this super simple with auto scaling groups and load balancers.
 - Amazon has a **TON** of resources.
-- AWS has a lot more features and services to help make your app even better.
+- AWS has a lot more features and services to help make your app even better. S3, DynamoDB, CodeDeploy, CloudWatch, Lambda are just a few of the many services AWS provides to help make deployment easier.
 
 **Setup**
 
@@ -55,4 +55,4 @@ sudo apt-get install -y nodejs
 - Be sure to think about what happens if you server or app crashes. Always make sure to have backup systems in place as best as you can.
 - Remember you can also map the IP address of your EC2 instance to your domain DNS so you can type in your domain name instead of IP address to view your website.
 - Don't forget to look at the [pricing](https://aws.amazon.com/ec2/pricing/) for EC2 instances 
-- We just talked about the very basics about getting a basic Node/Express app running on an EC2 instance. The possibilities are infinite and there is SO much more you can do with EC2.
+- We just talked about the very basics about getting a basic Node/Express app running on an EC2 instance. The possibilities are infinite and there is **SO** much more you can do with EC2.
